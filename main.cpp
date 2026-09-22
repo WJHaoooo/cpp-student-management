@@ -28,6 +28,12 @@ class StudentManager {
         }
 
         void printAll() const{
+
+            if (students.empty()) {
+                cout << "No students." << endl;
+                return;
+            }
+
             for (const auto& a : students) {
                 cout << "Name: " << a.name
                     << ", Age: " << a.age
