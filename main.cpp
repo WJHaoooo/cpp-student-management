@@ -76,6 +76,21 @@ class StudentManager {
             
         }
 
+        void FindStudent() const{
+            string input ;
+            cin >> input ;
+
+            for ( const auto& n : students ) {
+                if( n.name == input ) {
+                    cout << n.name << " " << n.age << " " << n.score << endl  ;
+                    return ;
+                }
+
+            }
+
+            cout << "Student not found." << endl ;
+
+        }
 
 } ;
 
@@ -84,6 +99,13 @@ int main(void) {
     int input ;
 
     StudentManager student ;
+
+    cout << "1. Add student" << endl ; 
+    cout << "2. Display all students" << endl ;
+    cout << "3. Find highest score" << endl ;
+    cout << "4. Calculate average" << endl ;
+    cout << "5. Search student" << endl ;
+    cout << "6. Exit" << endl ;
 
     while ( cin >> input ) {
 
@@ -102,10 +124,21 @@ int main(void) {
             student.countAvg() ;
             break;
         case 5:
+            student.FindStudent() ;
+            break ;
+        case 6:
             return 0 ;
         default:
             break;
         }
+
+        cout << endl ;
+        cout << "1. Add student" << endl ; 
+        cout << "2. Display all students" << endl ;
+        cout << "3. Find highest score" << endl ;
+        cout << "4. Calculate average" << endl ;
+        cout << "5. Search student" << endl ;
+        cout << "6. Exit" << endl ; 
 
     }
 
