@@ -82,7 +82,10 @@ class StudentManager {
 
             for ( const auto& n : students ) {
                 if( n.name == input ) {
-                    cout << n.name << " " << n.age << " " << n.score << endl  ;
+                    cout << "Name: " << n.name
+                         << ", Age: " << n.age
+                         << ", Score: " << n.score
+                         << endl ;
                     return ;
                 }
 
