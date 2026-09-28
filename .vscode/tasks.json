@@ -2,8 +2,8 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe 建置使用中檔案",
-            "command": "C:\\Users\\orlan\\Documents\\Codex\\tools\\msys64\\ucrt64\\bin\\gcc.exe",
+            "label": "C/C++: g++ 建置使用中檔案",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
